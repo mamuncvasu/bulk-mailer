@@ -819,3 +819,573 @@ Processing by PageController#index as HTML
 Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 2381)
 
 
+Started GET "/" for 127.0.0.1 at 2024-02-19 16:13:36 +0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PageController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering page/index.html.erb within layouts/application
+  Rendered page/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 265)
+  Rendered layouts/_nav.html.erb (Duration: 0.7ms | Allocations: 177)
+  Rendered layout layouts/application.html.erb (Duration: 145.9ms | Allocations: 36650)
+Completed 200 OK in 180ms (Views: 153.7ms | ActiveRecord: 0.0ms | Allocations: 40837)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (61.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-02-19 10:15:46.877268', '2024-02-19 10:15:46.877271') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActiveStorageTables (20240219101534)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar, "metadata" text, "service_name" varchar NOT NULL, "byte_size" bigint NOT NULL, "checksum" varchar, "created_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "blob_id" bigint NOT NULL, "variation_digest" varchar NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240219101534') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBulkMailers (20240219102436)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "bulk_mailers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "to" varchar, "cc" varchar, "subject" varchar, "body" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240219102436') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-02-19 16:25:29 +0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PageController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering page/index.html.erb within layouts/application
+  Rendered page/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 265)
+  Rendered layouts/_nav.html.erb (Duration: 0.5ms | Allocations: 177)
+  Rendered layout layouts/application.html.erb (Duration: 77.6ms | Allocations: 36739)
+Completed 200 OK in 103ms (Views: 86.5ms | ActiveRecord: 0.0ms | Allocations: 40862)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-19 16:29:43 +0600
+Processing by PageController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering page/index.html.erb within layouts/application
+  Rendered page/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 174)
+  Rendered layouts/_nav.html.erb (Duration: 0.3ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 16928)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 17851)
+
+
+Started GET "/test" for 127.0.0.1 at 2024-02-19 16:29:48 +0600
+Processing by PageController#test as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering page/test.html.erb within layouts/application
+  Rendered page/test.html.erb within layouts/application (Duration: 0.8ms | Allocations: 91)
+  Rendered layouts/_nav.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2213)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 2531)
+
+
+Started GET "/sed" for 127.0.0.1 at 2024-02-19 16:29:59 +0600
+  
+ActionController::RoutingError (No route matches [GET] "/sed"):
+  
+Started GET "/" for 127.0.0.1 at 2024-02-19 16:30:22 +0600
+Processing by PageController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering page/index.html.erb within layouts/application
+  Rendered page/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 172)
+  Rendered layouts/_nav.html.erb (Duration: 0.5ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 16909)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 17831)
+
+
+Started GET "/bulk_mailers" for 127.0.0.1 at 2024-02-19 16:30:24 +0600
+Processing by BulkMailersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bulk_mailers/index.html.erb within layouts/application
+  [1m[36mBulkMailer Load (0.1ms)[0m  [1m[34mSELECT "bulk_mailers".* FROM "bulk_mailers"[0m
+  ↳ app/views/bulk_mailers/index.html.erb:6
+  Rendered bulk_mailers/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 2138)
+  Rendered layouts/_nav.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 3360)
+Completed 200 OK in 117ms (Views: 10.7ms | ActiveRecord: 2.6ms | Allocations: 14985)
+
+
+Started GET "/bulk_mailers/new" for 127.0.0.1 at 2024-02-19 16:30:26 +0600
+Processing by BulkMailersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bulk_mailers/new.html.erb within layouts/application
+  Rendered bulk_mailers/_form.html.erb (Duration: 31.0ms | Allocations: 4094)
+  Rendered bulk_mailers/new.html.erb within layouts/application (Duration: 34.5ms | Allocations: 4377)
+  Rendered layouts/_nav.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 38.8ms | Allocations: 5583)
+Completed 200 OK in 104ms (Views: 39.3ms | ActiveRecord: 1.2ms | Allocations: 16338)
+
+
+Started GET "/bulk_mailers/new" for 127.0.0.1 at 2024-02-19 16:30:28 +0600
+Processing by BulkMailersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bulk_mailers/new.html.erb within layouts/application
+  Rendered bulk_mailers/_form.html.erb (Duration: 5.5ms | Allocations: 2057)
+  Rendered bulk_mailers/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2136)
+  Rendered layouts/_nav.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 3350)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 3623)
+
+
+Started POST "/bulk_mailers" for 127.0.0.1 at 2024-02-19 16:36:14 +0600
+Processing by BulkMailersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "bulk_mailer"=>{"to"=>"gmamuns@gmail.com", "cc"=>"mamunsikder@cvasu.ac.bd", "subject"=>"test 1 ", "body"=>"test 1  body", "mail_attach"=>["", #<ActionDispatch::Http::UploadedFile:0x00007f31b6fe1688 @tempfile=#<Tempfile:/tmp/RackMultipart20240219-17992-1xou55.pdf>, @content_type="application/pdf", @original_filename="MBBS notice 23-24.pdf", @headers="Content-Disposition: form-data; name=\"bulk_mailer[mail_attach][]\"; filename=\"MBBS notice 23-24.pdf\"\r\nContent-Type: application/pdf\r\n">]}, "commit"=>"Create Bulk mailer"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bulk_mailers_controller.rb:27:in `block in create'
+  [1m[36mBulkMailer Create (0.8ms)[0m  [1m[32mINSERT INTO "bulk_mailers" ("to", "cc", "subject", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["to", "gmamuns@gmail.com"], ["cc", "mamunsikder@cvasu.ac.bd"], ["subject", "test 1 "], ["body", "test 1  body"], ["created_at", "2024-02-19 10:36:14.893662"], ["updated_at", "2024-02-19 10:36:14.893662"]]
+  ↳ app/controllers/bulk_mailers_controller.rb:27:in `block in create'
+  [1m[36mActiveStorage::Blob Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["key", "b1hu3ebvh6euqzjygkifyqcnbjrz"], ["filename", "MBBS notice 23-24.pdf"], ["content_type", "application/pdf"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 8472139], ["checksum", "F7thgqIeVQES1ILrYIveIQ=="], ["created_at", "2024-02-19 10:36:14.899452"]]
+  ↳ app/controllers/bulk_mailers_controller.rb:27:in `block in create'
+  [1m[36mActiveStorage::Attachment Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "mail_attach"], ["record_type", "BulkMailer"], ["record_id", 1], ["blob_id", 1], ["created_at", "2024-02-19 10:36:14.900843"]]
+  ↳ app/controllers/bulk_mailers_controller.rb:27:in `block in create'
+  [1m[36mBulkMailer Update (0.1ms)[0m  [1m[33mUPDATE "bulk_mailers" SET "updated_at" = ? WHERE "bulk_mailers"."id" = ?[0m  [["updated_at", "2024-02-19 10:36:14.902550"], ["id", 1]]
+  ↳ app/controllers/bulk_mailers_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (41.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/bulk_mailers_controller.rb:27:in `block in create'
+[36m  Disk Storage (19.1ms) [0m[32mUploaded file to key: b1hu3ebvh6euqzjygkifyqcnbjrz (checksum: F7thgqIeVQES1ILrYIveIQ==)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bulk_mailers_controller.rb:27:in `block in create'
+  [1m[36mActiveStorage::Blob Update (0.8ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+  ↳ app/controllers/bulk_mailers_controller.rb:27:in `block in create'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = ?[0m  [["blob_id", 1]]
+  ↳ app/controllers/bulk_mailers_controller.rb:27:in `block in create'
+  [1m[36mBulkMailer Load (0.1ms)[0m  [1m[34mSELECT "bulk_mailers".* FROM "bulk_mailers" WHERE "bulk_mailers"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/bulk_mailers_controller.rb:27:in `block in create'
+  [1m[36mBulkMailer Update (0.1ms)[0m  [1m[33mUPDATE "bulk_mailers" SET "updated_at" = ? WHERE "bulk_mailers"."id" = ?[0m  [["updated_at", "2024-02-19 10:36:14.980788"], ["id", 1]]
+  ↳ app/controllers/bulk_mailers_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/bulk_mailers_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/bulk_mailers/1
+Completed 302 Found in 206ms (ActiveRecord: 45.2ms | Allocations: 60270)
+
+
+Started GET "/bulk_mailers/1" for 127.0.0.1 at 2024-02-19 16:36:14 +0600
+Processing by BulkMailersController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mBulkMailer Load (0.1ms)[0m  [1m[34mSELECT "bulk_mailers".* FROM "bulk_mailers" WHERE "bulk_mailers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bulk_mailers_controller.rb:63:in `set_bulk_mailer'
+  Rendering layout layouts/application.html.erb
+  Rendering bulk_mailers/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 1], ["record_type", "BulkMailer"], ["name", "mail_attach"]]
+  ↳ app/views/bulk_mailers/_bulk_mailer.html.erb:24
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bulk_mailers/_bulk_mailer.html.erb:25
+  Rendered bulk_mailers/_bulk_mailer.html.erb (Duration: 4.0ms | Allocations: 2969)
+  Rendered bulk_mailers/show.html.erb within layouts/application (Duration: 20.0ms | Allocations: 4769)
+  Rendered layouts/_nav.html.erb (Duration: 0.4ms | Allocations: 178)
+  Rendered layout layouts/application.html.erb (Duration: 38.2ms | Allocations: 20619)
+Completed 200 OK in 41ms (Views: 39.2ms | ActiveRecord: 0.3ms | Allocations: 22987)
+
+
+Started GET "/bulk_mailers" for 127.0.0.1 at 2024-02-19 16:36:17 +0600
+Processing by BulkMailersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bulk_mailers/index.html.erb within layouts/application
+  [1m[36mBulkMailer Load (0.3ms)[0m  [1m[34mSELECT "bulk_mailers".* FROM "bulk_mailers"[0m
+  ↳ app/views/bulk_mailers/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 1], ["record_type", "BulkMailer"], ["name", "mail_attach"]]
+  ↳ app/views/bulk_mailers/_bulk_mailer.html.erb:24
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bulk_mailers/_bulk_mailer.html.erb:25
+  Rendered bulk_mailers/_bulk_mailer.html.erb (Duration: 7.0ms | Allocations: 1425)
+  Rendered bulk_mailers/index.html.erb within layouts/application (Duration: 13.9ms | Allocations: 3117)
+  Rendered layouts/_nav.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 4331)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.6ms | Allocations: 4653)
+
+
+Started GET "/bulk_mailers/1/edit" for 127.0.0.1 at 2024-02-19 16:36:18 +0600
+Processing by BulkMailersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBulkMailer Load (0.2ms)[0m  [1m[34mSELECT "bulk_mailers".* FROM "bulk_mailers" WHERE "bulk_mailers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bulk_mailers_controller.rb:63:in `set_bulk_mailer'
+  Rendering layout layouts/application.html.erb
+  Rendering bulk_mailers/edit.html.erb within layouts/application
+  Rendered bulk_mailers/_form.html.erb (Duration: 8.9ms | Allocations: 2602)
+  Rendered bulk_mailers/edit.html.erb within layouts/application (Duration: 11.1ms | Allocations: 2921)
+  Rendered layouts/_nav.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 4123)
+Completed 200 OK in 19ms (Views: 15.6ms | ActiveRecord: 0.2ms | Allocations: 4800)
+
+
+Started GET "/bulk_mailers" for 127.0.0.1 at 2024-02-19 16:36:20 +0600
+Processing by BulkMailersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bulk_mailers/index.html.erb within layouts/application
+  [1m[36mBulkMailer Load (0.2ms)[0m  [1m[34mSELECT "bulk_mailers".* FROM "bulk_mailers"[0m
+  ↳ app/views/bulk_mailers/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 1], ["record_type", "BulkMailer"], ["name", "mail_attach"]]
+  ↳ app/views/bulk_mailers/_bulk_mailer.html.erb:24
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bulk_mailers/_bulk_mailer.html.erb:25
+  Rendered bulk_mailers/_bulk_mailer.html.erb (Duration: 5.2ms | Allocations: 1425)
+  Rendered bulk_mailers/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 2892)
+  Rendered layouts/_nav.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 4100)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.4ms | Allocations: 4354)
+
+
+Started GET "/bulk_mailers" for 127.0.0.1 at 2024-02-19 16:36:21 +0600
+Processing by BulkMailersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bulk_mailers/index.html.erb within layouts/application
+  [1m[36mBulkMailer Load (0.2ms)[0m  [1m[34mSELECT "bulk_mailers".* FROM "bulk_mailers"[0m
+  ↳ app/views/bulk_mailers/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 1], ["record_type", "BulkMailer"], ["name", "mail_attach"]]
+  ↳ app/views/bulk_mailers/_bulk_mailer.html.erb:24
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bulk_mailers/_bulk_mailer.html.erb:25
+  Rendered bulk_mailers/_bulk_mailer.html.erb (Duration: 6.5ms | Allocations: 1425)
+  Rendered bulk_mailers/index.html.erb within layouts/application (Duration: 10.7ms | Allocations: 2886)
+  Rendered layouts/_nav.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 4093)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.4ms | Allocations: 4353)
+
+
+Started GET "/bulk_mailers/1" for 127.0.0.1 at 2024-02-19 16:36:22 +0600
+Processing by BulkMailersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBulkMailer Load (0.2ms)[0m  [1m[34mSELECT "bulk_mailers".* FROM "bulk_mailers" WHERE "bulk_mailers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bulk_mailers_controller.rb:63:in `set_bulk_mailer'
+  Rendering layout layouts/application.html.erb
+  Rendering bulk_mailers/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 1], ["record_type", "BulkMailer"], ["name", "mail_attach"]]
+  ↳ app/views/bulk_mailers/_bulk_mailer.html.erb:24
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bulk_mailers/_bulk_mailer.html.erb:25
+  Rendered bulk_mailers/_bulk_mailer.html.erb (Duration: 19.5ms | Allocations: 1424)
+  Rendered bulk_mailers/show.html.erb within layouts/application (Duration: 21.9ms | Allocations: 2587)
+  Rendered layouts/_nav.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 3806)
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 0.4ms | Allocations: 4416)
+
+
+Started GET "/bulk_mailers/new" for 127.0.0.1 at 2024-02-19 16:36:23 +0600
+Processing by BulkMailersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bulk_mailers/new.html.erb within layouts/application
+  Rendered bulk_mailers/_form.html.erb (Duration: 7.1ms | Allocations: 2079)
+  Rendered bulk_mailers/new.html.erb within layouts/application (Duration: 8.6ms | Allocations: 2289)
+  Rendered layouts/_nav.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 3508)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 3839)
+
+
+Started GET "/bulk_mailers/1" for 127.0.0.1 at 2024-02-19 16:36:23 +0600
+Processing by BulkMailersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBulkMailer Load (0.2ms)[0m  [1m[34mSELECT "bulk_mailers".* FROM "bulk_mailers" WHERE "bulk_mailers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bulk_mailers_controller.rb:63:in `set_bulk_mailer'
+  Rendering layout layouts/application.html.erb
+  Rendering bulk_mailers/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 1], ["record_type", "BulkMailer"], ["name", "mail_attach"]]
+  ↳ app/views/bulk_mailers/_bulk_mailer.html.erb:24
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bulk_mailers/_bulk_mailer.html.erb:25
+  Rendered bulk_mailers/_bulk_mailer.html.erb (Duration: 7.0ms | Allocations: 1424)
+  Rendered bulk_mailers/show.html.erb within layouts/application (Duration: 9.6ms | Allocations: 2593)
+  Rendered layouts/_nav.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 3798)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.4ms | Allocations: 4407)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--f02d09423bcb4cb380b5c829970d7a2c4012e5ca/MBBS%20notice%2023-24.pdf" for 127.0.0.1 at 2024-02-19 16:36:26 +0600
+Processing by ActiveStorage::Blobs::RedirectController#show as PDF
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--f02d09423bcb4cb380b5c829970d7a2c4012e5ca", "filename"=>"MBBS notice 23-24"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: b1hu3ebvh6euqzjygkifyqcnbjrz (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJiMWh1M2Vidmg2ZXVxemp5Z2tpZnlxY25ianJ6IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiTUJCUyBub3RpY2UgMjMtMjQucGRmXCI7IGZpbGVuYW1lKj1VVEYtOCcnTUJCUyUyMG5vdGljZSUyMDIzLTI0LnBkZiIsImNvbnRlbnRfdHlwZSI6ImFwcGxpY2F0aW9uL3BkZiIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDItMTlUMTA6NDE6MjYuMDE5WiIsInB1ciI6ImJsb2Jfa2V5In19--8167e655c0b4433899cfacb8c621c30e670bf95a/MBBS%20notice%2023-24.pdf)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJiMWh1M2Vidmg2ZXVxemp5Z2tpZnlxY25ianJ6IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiTUJCUyBub3RpY2UgMjMtMjQucGRmXCI7IGZpbGVuYW1lKj1VVEYtOCcnTUJCUyUyMG5vdGljZSUyMDIzLTI0LnBkZiIsImNvbnRlbnRfdHlwZSI6ImFwcGxpY2F0aW9uL3BkZiIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDItMTlUMTA6NDE6MjYuMDE5WiIsInB1ciI6ImJsb2Jfa2V5In19--8167e655c0b4433899cfacb8c621c30e670bf95a/MBBS%20notice%2023-24.pdf
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 2436)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJiMWh1M2Vidmg2ZXVxemp5Z2tpZnlxY25ianJ6IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiTUJCUyBub3RpY2UgMjMtMjQucGRmXCI7IGZpbGVuYW1lKj1VVEYtOCcnTUJCUyUyMG5vdGljZSUyMDIzLTI0LnBkZiIsImNvbnRlbnRfdHlwZSI6ImFwcGxpY2F0aW9uL3BkZiIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDItMTlUMTA6NDE6MjYuMDE5WiIsInB1ciI6ImJsb2Jfa2V5In19--8167e655c0b4433899cfacb8c621c30e670bf95a/MBBS%20notice%2023-24.pdf" for 127.0.0.1 at 2024-02-19 16:36:26 +0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"MBBS notice 23-24"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 278)
+
+
+Started GET "/bulk_mailers" for 127.0.0.1 at 2024-02-19 16:36:31 +0600
+Processing by BulkMailersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bulk_mailers/index.html.erb within layouts/application
+  [1m[36mBulkMailer Load (0.1ms)[0m  [1m[34mSELECT "bulk_mailers".* FROM "bulk_mailers"[0m
+  ↳ app/views/bulk_mailers/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 1], ["record_type", "BulkMailer"], ["name", "mail_attach"]]
+  ↳ app/views/bulk_mailers/_bulk_mailer.html.erb:24
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bulk_mailers/_bulk_mailer.html.erb:25
+  Rendered bulk_mailers/_bulk_mailer.html.erb (Duration: 2.0ms | Allocations: 1426)
+  Rendered bulk_mailers/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 2878)
+  Rendered layouts/_nav.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 4086)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.1ms | Allocations: 4339)
+
+
+Started GET "/bulk_mailers/1" for 127.0.0.1 at 2024-02-19 16:36:38 +0600
+Processing by BulkMailersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBulkMailer Load (0.2ms)[0m  [1m[34mSELECT "bulk_mailers".* FROM "bulk_mailers" WHERE "bulk_mailers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bulk_mailers_controller.rb:63:in `set_bulk_mailer'
+  Rendering layout layouts/application.html.erb
+  Rendering bulk_mailers/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 1], ["record_type", "BulkMailer"], ["name", "mail_attach"]]
+  ↳ app/views/bulk_mailers/_bulk_mailer.html.erb:24
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bulk_mailers/_bulk_mailer.html.erb:25
+  Rendered bulk_mailers/_bulk_mailer.html.erb (Duration: 6.9ms | Allocations: 1424)
+  Rendered bulk_mailers/show.html.erb within layouts/application (Duration: 9.5ms | Allocations: 2587)
+  Rendered layouts/_nav.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 25.5ms | Allocations: 3806)
+Completed 200 OK in 29ms (Views: 26.0ms | ActiveRecord: 0.4ms | Allocations: 4416)
+
+
+Started GET "/bulk_mailers/1" for 127.0.0.1 at 2024-02-19 16:40:19 +0600
+Processing by BulkMailersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBulkMailer Load (0.1ms)[0m  [1m[34mSELECT "bulk_mailers".* FROM "bulk_mailers" WHERE "bulk_mailers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bulk_mailers_controller.rb:63:in `set_bulk_mailer'
+  Rendering layout layouts/application.html.erb
+  Rendering bulk_mailers/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 1], ["record_type", "BulkMailer"], ["name", "mail_attach"]]
+  ↳ app/views/bulk_mailers/_bulk_mailer.html.erb:24
+  Rendered bulk_mailers/_bulk_mailer.html.erb (Duration: 12.7ms | Allocations: 7543)
+  Rendered bulk_mailers/show.html.erb within layouts/application (Duration: 13.8ms | Allocations: 8869)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 8961)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 2.2ms | Allocations: 16238)
+
+
+  
+ActionView::Template::Error (Cannot find variant :thumb for BulkMailer#mail_attach):
+    23:     <strong>Mail attach:</strong>
+    24:     <% bulk_mailer.mail_attach.each do |mail_attach| %>
+    25:       <div>
+    26:         <%= image_tag mail_attach.variant(:thumb) %>
+    27: 
+    28:         <%#= link_to mail_attach.filename, mail_attach %>
+    29:       </div>
+  
+app/views/bulk_mailers/_bulk_mailer.html.erb:26
+app/views/bulk_mailers/_bulk_mailer.html.erb:24
+app/views/bulk_mailers/show.html.erb:3
+Started GET "/bulk_mailers/1" for 127.0.0.1 at 2024-02-19 16:40:32 +0600
+Processing by BulkMailersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBulkMailer Load (0.1ms)[0m  [1m[34mSELECT "bulk_mailers".* FROM "bulk_mailers" WHERE "bulk_mailers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bulk_mailers_controller.rb:63:in `set_bulk_mailer'
+  Rendering layout layouts/application.html.erb
+  Rendering bulk_mailers/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 1], ["record_type", "BulkMailer"], ["name", "mail_attach"]]
+  ↳ app/views/bulk_mailers/_bulk_mailer.html.erb:24
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bulk_mailers/_bulk_mailer.html.erb:26
+  Rendered bulk_mailers/_bulk_mailer.html.erb (Duration: 37.4ms | Allocations: 16645)
+  Rendered bulk_mailers/show.html.erb within layouts/application (Duration: 39.8ms | Allocations: 18166)
+  Rendered layouts/_nav.html.erb (Duration: 0.5ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 74.7ms | Allocations: 33981)
+Completed 200 OK in 84ms (Views: 74.8ms | ActiveRecord: 2.4ms | Allocations: 41308)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJiMWh1M2Vidmg2ZXVxemp5Z2tpZnlxY25ianJ6IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiTUJCUyBub3RpY2UgMjMtMjQucGRmXCI7IGZpbGVuYW1lKj1VVEYtOCcnTUJCUyUyMG5vdGljZSUyMDIzLTI0LnBkZiIsImNvbnRlbnRfdHlwZSI6ImFwcGxpY2F0aW9uL3BkZiIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDItMTlUMTA6NDE6MjYuMDE5WiIsInB1ciI6ImJsb2Jfa2V5In19--8167e655c0b4433899cfacb8c621c30e670bf95a/MBBS%20notice%2023-24.pdf" for 127.0.0.1 at 2024-02-19 16:40:32 +0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"MBBS notice 23-24"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 320)
+
+
+Started GET "/bulk_mailers/1" for 127.0.0.1 at 2024-02-19 16:41:00 +0600
+Processing by BulkMailersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBulkMailer Load (0.1ms)[0m  [1m[34mSELECT "bulk_mailers".* FROM "bulk_mailers" WHERE "bulk_mailers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bulk_mailers_controller.rb:63:in `set_bulk_mailer'
+  Rendering layout layouts/application.html.erb
+  Rendering bulk_mailers/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 1], ["record_type", "BulkMailer"], ["name", "mail_attach"]]
+  ↳ app/views/bulk_mailers/_bulk_mailer.html.erb:24
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bulk_mailers/_bulk_mailer.html.erb:26
+  Rendered bulk_mailers/_bulk_mailer.html.erb (Duration: 18.3ms | Allocations: 16545)
+  Rendered bulk_mailers/show.html.erb within layouts/application (Duration: 19.9ms | Allocations: 18075)
+  Rendered layouts/_nav.html.erb (Duration: 0.6ms | Allocations: 181)
+  Rendered layout layouts/application.html.erb (Duration: 35.9ms | Allocations: 33844)
+Completed 200 OK in 45ms (Views: 36.1ms | ActiveRecord: 2.1ms | Allocations: 41122)
+
+
+Started GET "/bulk_mailers" for 127.0.0.1 at 2024-02-19 16:41:03 +0600
+Processing by BulkMailersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bulk_mailers/index.html.erb within layouts/application
+  [1m[36mBulkMailer Load (0.3ms)[0m  [1m[34mSELECT "bulk_mailers".* FROM "bulk_mailers"[0m
+  ↳ app/views/bulk_mailers/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 1], ["record_type", "BulkMailer"], ["name", "mail_attach"]]
+  ↳ app/views/bulk_mailers/_bulk_mailer.html.erb:24
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bulk_mailers/_bulk_mailer.html.erb:26
+  Rendered bulk_mailers/_bulk_mailer.html.erb (Duration: 7.1ms | Allocations: 1429)
+  Rendered bulk_mailers/index.html.erb within layouts/application (Duration: 12.4ms | Allocations: 3160)
+  Rendered layouts/_nav.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 4370)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.5ms | Allocations: 4694)
+
+
+Started GET "/bulk_mailers" for 127.0.0.1 at 2024-02-19 16:42:42 +0600
+Processing by BulkMailersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bulk_mailers/index.html.erb within layouts/application
+  [1m[36mBulkMailer Load (0.2ms)[0m  [1m[34mSELECT "bulk_mailers".* FROM "bulk_mailers"[0m
+  ↳ app/views/bulk_mailers/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 1], ["record_type", "BulkMailer"], ["name", "mail_attach"]]
+  ↳ app/views/bulk_mailers/_bulk_mailer.html.erb:24
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bulk_mailers/_bulk_mailer.html.erb:26
+  Rendered bulk_mailers/_bulk_mailer.html.erb (Duration: 6.4ms | Allocations: 1424)
+  Rendered bulk_mailers/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 2873)
+  Rendered layouts/_nav.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 4080)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.5ms | Allocations: 4347)
+
+
+Started GET "/bulk_mailers/new" for 127.0.0.1 at 2024-02-19 16:42:43 +0600
+Processing by BulkMailersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bulk_mailers/new.html.erb within layouts/application
+  Rendered bulk_mailers/_form.html.erb (Duration: 2.5ms | Allocations: 2584)
+  Rendered bulk_mailers/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2863)
+  Rendered layouts/_nav.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 4069)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 4408)
+
+
+  [1m[36mBulkMailer Load (0.3ms)[0m  [1m[34mSELECT "bulk_mailers".* FROM "bulk_mailers" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/bulk_mailers" for 127.0.0.1 at 2024-02-19 16:53:58 +0600
+Processing by BulkMailersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bulk_mailers/index.html.erb within layouts/application
+  [1m[36mBulkMailer Load (0.6ms)[0m  [1m[34mSELECT "bulk_mailers".* FROM "bulk_mailers"[0m
+  ↳ app/views/bulk_mailers/index.html.erb:18
+  Rendered bulk_mailers/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 4786)
+  Rendered layouts/_nav.html.erb (Duration: 0.4ms | Allocations: 180)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 20593)
+Completed 200 OK in 24ms (Views: 19.6ms | ActiveRecord: 0.9ms | Allocations: 23516)
+
+
+Started GET "/bulk_mailers" for 127.0.0.1 at 2024-02-19 16:54:35 +0600
+Processing by BulkMailersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bulk_mailers/index.html.erb within layouts/application
+  [1m[36mBulkMailer Load (0.1ms)[0m  [1m[34mSELECT "bulk_mailers".* FROM "bulk_mailers"[0m
+  ↳ app/views/bulk_mailers/index.html.erb:18
+  Rendered bulk_mailers/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 5246)
+  Rendered layouts/_nav.html.erb (Duration: 0.3ms | Allocations: 178)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 20866)
+Completed 200 OK in 18ms (Views: 13.9ms | ActiveRecord: 1.0ms | Allocations: 23781)
+
+
+Started GET "/bulk_mailers" for 127.0.0.1 at 2024-02-19 16:54:46 +0600
+Processing by BulkMailersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bulk_mailers/index.html.erb within layouts/application
+  [1m[36mBulkMailer Load (0.1ms)[0m  [1m[34mSELECT "bulk_mailers".* FROM "bulk_mailers"[0m
+  ↳ app/views/bulk_mailers/index.html.erb:18
+  Rendered bulk_mailers/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 5231)
+  Rendered layouts/_nav.html.erb (Duration: 0.3ms | Allocations: 178)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 21042)
+Completed 200 OK in 20ms (Views: 15.6ms | ActiveRecord: 1.2ms | Allocations: 23949)
+
+
+Started GET "/bulk_mailers/new" for 127.0.0.1 at 2024-02-19 16:54:57 +0600
+Processing by BulkMailersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bulk_mailers/new.html.erb within layouts/application
+  Rendered bulk_mailers/_form.html.erb (Duration: 8.0ms | Allocations: 2580)
+  Rendered bulk_mailers/new.html.erb within layouts/application (Duration: 10.0ms | Allocations: 2858)
+  Rendered layouts/_nav.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 4064)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms | Allocations: 4403)
+
+
+Started GET "/bulk_mailers/1" for 127.0.0.1 at 2024-02-19 16:55:00 +0600
+Processing by BulkMailersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBulkMailer Load (0.9ms)[0m  [1m[34mSELECT "bulk_mailers".* FROM "bulk_mailers" WHERE "bulk_mailers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bulk_mailers_controller.rb:63:in `set_bulk_mailer'
+  Rendering layout layouts/application.html.erb
+  Rendering bulk_mailers/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 1], ["record_type", "BulkMailer"], ["name", "mail_attach"]]
+  ↳ app/views/bulk_mailers/_bulk_mailer.html.erb:24
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bulk_mailers/_bulk_mailer.html.erb:26
+  Rendered bulk_mailers/_bulk_mailer.html.erb (Duration: 39.0ms | Allocations: 16507)
+  Rendered bulk_mailers/show.html.erb within layouts/application (Duration: 42.5ms | Allocations: 17971)
+  Rendered layouts/_nav.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 44.0ms | Allocations: 19175)
+Completed 200 OK in 49ms (Views: 43.2ms | ActiveRecord: 2.4ms | Allocations: 20494)
+
+
+Started GET "/bulk_mailers" for 127.0.0.1 at 2024-02-19 16:55:08 +0600
+Processing by BulkMailersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bulk_mailers/index.html.erb within layouts/application
+  [1m[36mBulkMailer Load (0.2ms)[0m  [1m[34mSELECT "bulk_mailers".* FROM "bulk_mailers"[0m
+  ↳ app/views/bulk_mailers/index.html.erb:18
+  Rendered bulk_mailers/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1406)
+  Rendered layouts/_nav.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 2614)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.1ms | Allocations: 2869)
+
+
+Started GET "/bulk_mailers" for 127.0.0.1 at 2024-02-19 16:55:09 +0600
+Processing by BulkMailersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bulk_mailers/index.html.erb within layouts/application
+  [1m[36mBulkMailer Load (0.2ms)[0m  [1m[34mSELECT "bulk_mailers".* FROM "bulk_mailers"[0m
+  ↳ app/views/bulk_mailers/index.html.erb:18
+  Rendered bulk_mailers/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1399)
+  Rendered layouts/_nav.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 2607)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms | Allocations: 2861)
+
+
+Started GET "/bulk_mailers" for 127.0.0.1 at 2024-02-19 16:56:13 +0600
+Processing by BulkMailersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bulk_mailers/index.html.erb within layouts/application
+  [1m[36mBulkMailer Load (0.1ms)[0m  [1m[34mSELECT "bulk_mailers".* FROM "bulk_mailers"[0m
+  ↳ app/views/bulk_mailers/index.html.erb:19
+  Rendered bulk_mailers/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 5290)
+  Rendered layouts/_nav.html.erb (Duration: 0.4ms | Allocations: 178)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 21101)
+Completed 200 OK in 21ms (Views: 16.4ms | ActiveRecord: 1.2ms | Allocations: 24022)
+
+
+Started GET "/bulk_mailers/new" for 127.0.0.1 at 2024-02-19 16:56:51 +0600
+Processing by BulkMailersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bulk_mailers/new.html.erb within layouts/application
+  Rendered bulk_mailers/_form.html.erb (Duration: 6.9ms | Allocations: 2577)
+  Rendered bulk_mailers/new.html.erb within layouts/application (Duration: 8.7ms | Allocations: 2855)
+  Rendered layouts/_nav.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 4061)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 4400)
+
+
+Started GET "/bulk_mailers/new" for 127.0.0.1 at 2024-02-19 16:56:53 +0600
+Processing by BulkMailersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bulk_mailers/new.html.erb within layouts/application
+  Rendered bulk_mailers/_form.html.erb (Duration: 5.4ms | Allocations: 2087)
+  Rendered bulk_mailers/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2166)
+  Rendered layouts/_nav.html.erb (Duration: 0.2ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 3372)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 3634)
+
+

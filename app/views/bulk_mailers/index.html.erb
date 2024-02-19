@@ -1,0 +1,43 @@
+<div class="columns">
+  <div class="column m-2">
+    <p class="notification" style="color: green"><%= notice %></p>
+    <h1 class="title is-2">Bulk mailers</h1>
+
+    <%= link_to "Create bulk mailer", new_bulk_mailer_path, class: "button is-link" %>
+
+    <div class="table-container">
+      <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth ">
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>Body</th>
+            <th>Sent_at</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @bulk_mailers.each do |bulk_mailer| %>
+            <tr>
+              <td><%=bulk_mailer.subject %></td>
+              <td><%=bulk_mailer.body %></td>
+              <td><%=bulk_mailer.updated_at %></td>
+              <td><%= link_to "Show", bulk_mailer, class: "button is-link" %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<!--<div id="bulk_mailers">-->
+  <%# @bulk_mailers.each do |bulk_mailer| %>
+    <%#= render bulk_mailer %>
+<!--    <p>-->
+      <%#= link_to "Show this bulk mailer", bulk_mailer %>
+<!--    </p>-->
+  <%# end %>
+<!--</div>-->
+
+

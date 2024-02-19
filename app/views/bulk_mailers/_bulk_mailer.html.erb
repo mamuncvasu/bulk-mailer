@@ -1,0 +1,31 @@
+<div id="<%= dom_id bulk_mailer %>">
+  <p>
+    <strong>To:</strong>
+    <%= bulk_mailer.to %>
+  </p>
+
+  <p>
+    <strong>Cc:</strong>
+    <%= bulk_mailer.cc %>
+  </p>
+
+  <p>
+    <strong>Subject:</strong>
+    <%= bulk_mailer.subject %>
+  </p>
+
+  <p>
+    <strong>Body:</strong>
+    <%= bulk_mailer.body %>
+  </p>
+
+  <p>
+    <strong>Mail attach:</strong>
+    <% bulk_mailer.mail_attach.each do |mail_attach| %>
+      <div>
+        <%= link_to mail_attach.filename, mail_attach %>
+      </div>
+    <% end %>
+  </p>
+
+</div>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @bulk_mailer %>
+
+<div>
+  <%= link_to "Edit this bulk mailer", edit_bulk_mailer_path(@bulk_mailer) %> |
+  <%= link_to "Back to bulk mailers", bulk_mailers_path %>
+
+  <%= button_to "Destroy this bulk mailer", @bulk_mailer, method: :delete %>
+</div>
